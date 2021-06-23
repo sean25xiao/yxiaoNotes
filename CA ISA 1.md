@@ -13,19 +13,12 @@
 
 # Who Determine ISA
 
-- 
-
-  Application Requirements 程序要求
-
-  - It suggests how to improve architecture
-  - 例子：Video Processing 需要更多 Vector 相关的指令
-
-- 
-
-  Technology Constraints 技术限制
-
-  - It restricts what can be done efficiently
-  - New technology makes new architecture possible
++ Application Requirements 程序要求
+	+ It suggests how to improve architecture
+	+ 例子：Video Processing 需要更多 Vector 相关的指令
++ Technology Constraints 技术限制
+	+ It restricts what can be done efficiently
+	+ New technology makes new architecture possible
 
 # Why Diversity in ISA?
 
