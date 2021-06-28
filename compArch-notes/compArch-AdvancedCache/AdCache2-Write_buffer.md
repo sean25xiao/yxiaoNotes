@@ -1,6 +1,6 @@
 # Advanced Optimization 2 - Write Buffers
 
-+ Reduce [[CA Cache 17 - Miss Penalty | Miss Penalty]]
++ Reduce Miss Penalty
 
 ## Why need Write Buffers
 
