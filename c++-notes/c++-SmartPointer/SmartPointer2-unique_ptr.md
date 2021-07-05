@@ -67,17 +67,17 @@
 	
 	vec.push_back(std::move(ptr));
     
-    // ========
-    std::unique_ptr<Test> t1 {new Test{100}};
+	// ========
+	std::unique_ptr<Test> t1 {new Test{100}};
     
-    std::unique_ptr<Test> t2;
+	std::unique_ptr<Test> t2;
     
-    t2 = t1;  // ERROR - assign not allowed
+	t2 = t1;  // ERROR - assign not allowed
     
-    t2 = std::move(t1);  // OK, now t1's ownership of the object is moved to t2, and t1 now is a NULL pointer
+	t2 = std::move(t1);  // OK, now t1's ownership of the object is moved to t2, and t1 now is a NULL pointer
     
-    if(!t1)
-        std::cout << "t1 is nullptr" << std::endl;  // it will print this
+	if(!t1)
+		std::cout << "t1 is nullptr" << std::endl;  // it will print this
 	
 } // automatically deleted
 ```
