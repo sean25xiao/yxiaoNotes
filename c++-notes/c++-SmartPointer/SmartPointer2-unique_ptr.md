@@ -94,14 +94,14 @@
     
     // =================
     std::vector<std::unique_ptr<Account>> accounts;
-
+    
     accounts.push_back( make_unique<Checking_Account>("James", 1000));
     accounts.push_back( make_unique<Savings_Account>("Billy", 4000, 5.2));
     accounts.push_back( make_unique<Trust_Account>("Bobby", 5000, 4.5));
-
+    
     for (auto acc: accounts)  // ERROR - copy not allowed
-    for (const auto &acc: accounts)
-        std::cout << *acc << std::endl;
+	for (const auto &acc: accounts)
+		std::cout << *acc << std::endl;
 	
 } // automatically deleted
 ```
