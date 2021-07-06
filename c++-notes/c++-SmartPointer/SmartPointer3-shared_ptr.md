@@ -73,7 +73,7 @@
 } // automatically deleted
 ```
 
-## `shared_ptr` - `make_shared` in C++11
+## `shared_ptr` - `make_shared` in **C++11**
 
 + 尽量使用 `make_shared`，因为更加有效率
   + 可以将创建新 raw pointer、`use_count`、object 集合在一行代码上面
