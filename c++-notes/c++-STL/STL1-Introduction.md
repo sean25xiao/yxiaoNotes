@@ -173,3 +173,14 @@ while (it != vec.end()) {
 }
 // Output: 3, 2, 1
 ```
+
+##### Other Iterators
+
++ `begin()` and `end()`
+  + `iterator`
++ `cbegin()` and `cend()`
+  + `const_iterator`
++ `rbegin()` and `rend()`
+  + `reverse_iterator`
++ `crbegin()` and `crend()`
+  + `const_reverse_iterator`
