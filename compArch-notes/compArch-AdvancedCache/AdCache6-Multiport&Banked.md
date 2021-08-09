@@ -1,4 +1,4 @@
-# Advanced Optimization 5 - Multiporting and Banking
+# Advanced Optimization 6 - Multiporting and Banking
 
 ## Why need Multiple Ports for Cache?
 
