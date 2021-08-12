@@ -1,4 +1,4 @@
-# C++ Operator Overloading 4 - Overloading Binary Operator
+# C++ Operator Overloading 4 - Overload Binary Operator
 
 ## Overload Binary Operator (`+`, `-`, `==`, `!=`, `<`, `>`) by Member Function
 

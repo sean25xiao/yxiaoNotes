@@ -1,4 +1,4 @@
-# C++ Operator Overloading 3 - Overloading Unary Operator
+# C++ Operator Overloading 3 - Overload Unary Operator
 
 ## Overload Unary Operator (`++`, `--`, `-`, `!`) by Member Function
 
