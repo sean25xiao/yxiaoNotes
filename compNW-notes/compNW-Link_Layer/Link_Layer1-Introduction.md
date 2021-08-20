@@ -42,3 +42,27 @@
 
 
 # Where is the Link Layer Implemented?
+
++ 通常情况下，Link Layer 同时是现在软件和硬件上
++ 软件上
+  + 在发送端，实现在软件里的 Link Layer 主要负责：
+    + 收集 Link-Layer 地址信息
+    + 激活并且配置 NIC 硬件控制模块
+  + 在接收端，实现在软件里的 Link Layer 主要负责：
+    + 系统的中断
+    + 处理错误情况
+    + 将收到并且提取出来的 Datagram 送给上层的 Network Layer
++ 硬件上
+  + Link Layer 实现在一个硬件模块上，名叫 Network Adapter，或者叫做 Network Interface Card (NIC)
+    + 现代的 NIC 基本都装进了 Host 的主板中，或者集成进了 SoC 中
+    + 比如：Intel 710 Adapter 实现了 Ethernet 协议
+    + Atheros AR5006 实现了 802.11 WiFi 协议
+  + 在发送端，网络硬件主要负责：
+    + 将由上层协议/层面创建的 Datagram 包装在 Link-Layer 的 Frame 中
+    + 之后按照链路访问协议（Link-Access Protocol）将 Frame 传输给通讯链路（Communication Link）
+  + 在接收端，网络硬件主要负责：
+    + 接受发送而来的 Frame，并提取出当中的 Network-Layer Datagram
+  + 如果 Link Layer 要求错误检测（Error Detection）
+    + 那么发送端会在 Frame 的 Header 设置 Error-Detection Bits
+    + 接收端会来检测错误
++ 所以，Link-Layer 在计算机网络系统中，处在软件和硬件交界处，这一点很像 Computer Architecture
