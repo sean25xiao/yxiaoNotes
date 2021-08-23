@@ -32,3 +32,21 @@
   + 随机访问协议 Random Access Protocols
   + 轮流协议 Taking-Turns Protocols
 
+## 通信通道划分协议 Channel Partitioning Protocols
+
+![image-20210823001525001](https://raw.githubusercontent.com/sean25xiao/yxiaoNotes-pic/main/image-20210823001525001.png)
+
++ 有两种通道划分协议
+  + 时分多路复用 Time-Division Multiplexing (TDM)
+  + 频分多路复用 Frequency-Division Multiplexing (FDM)
+
++ **时分多路复用 Time-Division Multiplexing (TDM)** —— 假设一个通信通道支持N 个 Nodes，通道的传输速率是 R bps
+  + TDM 方法将时间分为多个时间帧（Time Frames），然后再将时间帧分为 `N` 个槽（Slot），每个 Node 会被分配其中一个槽
+  + 时间槽（Time Slot）的长度会允许一个 Frame 数据被完整的传送完成
+  + 当每个 Node 都过完之后，会从头开始进入新的 Time Frame，然后每个 Node 继续有机会成为发送端
+  + 优点
+    + 消除了链路帧冲突 Frame Collision
+    + 让每个 Node 都有机会成为发送端
+  + 缺点
+    + 如果一个通道里面有 `N` 个 Node 但只有一个 Node 需要发送数据，那么它的传输速率被限定在了 `R/N` 之内，并且只能等到它的 Time Slote 才能够发送数据
+
