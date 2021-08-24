@@ -39,3 +39,15 @@ lexer.c: lexer.l
 	flex -t lexer.l > lexer.c
 ```
 
++ 检查 `count_words.o` 有没有被建造，发现没有
++ 转到第二个 Rule，检查 `count_words.c` 是否是另一个 Target，发现不是，并且存在，因为是源代码
++ 执行第二个 Rule 的指令，生成 `count_words.o` 文件
++ 回到第一个 Rule，往下检查，检查 `lexer.o` 有没有被建造，发现没有
++ 转到第三个 Rule，检查 `lexer.c` 是 Target 吗，发现是
++ 转到第四个 Rule，检查 `lexer.l`，发现其不是 Target，也存在
++ 执行第四个 Rule 的指令，生成 `lexer.c`
++ 回到第三个 Rule，执行其指令，生成 `lexer.o`
++ 回到第一个 Rule，检查第三个前置，发现是 `-lfl`，链接对于的 System Library
+  + `-l` 可以提示链接器链接系统库，在这个案例中，`libfl.a` 将会被链接
+  + 对于 `-l<NAME>` 通常 make 会搜索 `lib<NAME>.so`，如果没找到，会继续搜索 `lib<NAME>.a`
++ 最终执行第一个 Rule 的指令，生成 `count_words` 可执行目标文件
