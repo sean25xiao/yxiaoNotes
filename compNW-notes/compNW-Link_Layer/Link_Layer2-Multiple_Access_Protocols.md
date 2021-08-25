@@ -36,9 +36,10 @@
 
 ![image-20210823001525001](https://raw.githubusercontent.com/sean25xiao/yxiaoNotes-pic/main/image-20210823001525001.png)
 
-+ 有两种通道划分协议
++ 有三种通道划分协议
   + 时分多路复用 Time-Division Multiplexing (TDM)
   + 频分多路复用 Frequency-Division Multiplexing (FDM)
+  + 码分多址 Code Division Multiple Access (CDMA)
 
 + **时分多路复用 Time-Division Multiplexing (TDM)** —— 假设一个通信通道支持N 个 Nodes，通道的传输速率是 R bps
   + TDM 方法将时间分为多个时间帧（Time Frames），然后再将时间帧分为 `N` 个槽（Slot），每个 Node 会被分配其中一个槽
@@ -48,5 +49,14 @@
     + 消除了链路帧冲突 Frame Collision
     + 让每个 Node 都有机会成为发送端
   + 缺点
-    + 如果一个通道里面有 `N` 个 Node 但只有一个 Node 需要发送数据，那么它的传输速率被限定在了 `R/N` 之内，并且只能等到它的 Time Slote 才能够发送数据
+    + 如果一个通道里面有 `N` 个 Node 但只有一个 Node 需要发送数据，那么它的传输速率被限定在了 `R/N` 之内，并且只能等到它的 Time Slot 才能够发送数据
+
++ **频分多路复用 Frequency-Division Multiplexing** —— 假设一个通信通道支持N 个 Nodes，通道的传输速率是 R bps
+  + FDM 方法将频率分为 N 个频道，每个频道的带宽是 R/N，每一个 Node 都被分配到一个频道上面
+  + 优点
+    + 消除了冲突
+    + 相比 TDM，每个 Node 都有自己的通信频道，不需要花费时间等自己的 Time Slot
+  + 缺点
+    + 更小的带宽
+    + 和 TDM 的缺点一样，一旦只有一个 Node 需要发送数据，那么它的带宽就被限制在了 R/N
 
